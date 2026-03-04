@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>USVN – Veterans Helping Veterans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #001F3F;
+      --crimson: #C8102E;
+      --gray: #5D6D7E;
+      --offwhite: #F8F9FA;
+      --gold: #BFAF5A;
+      --dark-navy: #0A162F;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--offwhite);
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 700; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Header / Hero */
+    header {
+      background: linear-gradient(rgba(0,31,63,0.85), rgba(0,31,63,0.75)),
+                  url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 8rem 1rem 6rem;
+    }
+    header h1 { font-size: 3.2rem; margin-bottom: 1rem; }
+    header p { font-size: 1.4rem; max-width: 700px; margin: 0 auto 2.5rem; opacity: 0.95; }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .btn-primary { background: var(--crimson); color: white; }
+    .btn-primary:hover { background: #a00d26; transform: translateY(-2px); }
+    .btn-outline { border: 2px solid white; color: white; margin-left: 1rem; }
+    .btn-outline:hover { background: rgba(255,255,255,0.15); }
+
+    /* Trust bar */
+    .trust {
+      background: var(--navy);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .trust-item h3 { font-size: 2.4rem; color: var(--gold); margin-bottom: 0.5rem; }
+
+    /* Sections */
+    section { padding: 5rem 1rem; }
+    h2 { font-size: 2.8rem; text-align: center; margin-bottom: 3rem; color: var(--navy); }
+
+    .steps-grid, .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.25s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card h3 { color: var(--crimson); margin-bottom: 1rem; font-size: 1.6rem; }
+    .icon { font-size: 3.5rem; margin-bottom: 1rem; color: var(--gold); }
+
+    /* Discord preview */
+    .discord-preview {
+      background: var(--dark-navy);
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+    .discord-preview .btn-primary { font-size: 1.4rem; padding: 1.3rem 3rem; }
+
+    footer {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.95rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      header { padding: 6rem 1rem 4rem; }
+      header h1 { font-size: 2.6rem; }
+      header p { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Veterans Helping Veterans Win the VA Fight</h1>
+      <p>Peer-led Discord community • Free 1-on-1 buddy support for disability claims, benefits navigation, paperwork, and real veteran-to-veteran talk — no red tape, no judgment.</p>
+      <div>
+        <a href="https://discord.com/invite/usvn" class="btn btn-primary" target="_blank">Join the Discord Now</a>
+        <a href="#signup" class="btn btn-outline">Get Launch Updates</a>
+      </div>
+      <p style="margin-top:2rem; font-size:1rem; opacity:0.9;">
+        501(c)(3) Nonprofit • EIN 41-3630368 • 100% Veteran-Run & Volunteer-Led
+      </p>
+    </div>
+  </header>
+
+  <section class="trust">
+    <div class="container">
+      <h2>Real Support. Real Results.</h2>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3>5,800+</h3>
+          <p>Members in our Discord Community</p>
+        </div>
+        <div class="trust-item">
+          <h3>Hundreds</h3>
+          <p>Helped Filing & Winning Claims</p>
+        </div>
+        <div class="trust-item">
+          <h3>Free • Always</h3>
+          <p>Peer-Led • No Cost • Open 24/7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps-grid">
+        <div class="card">
+          <div class="icon">🤝</div>
+          <h3>Get Matched with a Buddy</h3>
+          <p>Connect one-on-one with a volunteer who's already navigated the exact same VA process you're facing.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📋</div>
+          <h3>Step-by-Step Claim Guidance</h3>
+          <p>Walkthroughs, checklists, evidence tips, deadlines, appeals — everything broken down plainly.</p>
+        </div>
+        <div class="card">
+          <div class="icon">💬</div>
+          <h3>Join Real Conversations</h3>
+          <p>Live Q&A, resource drops, success stories, and daily support inside our active Discord server.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="discord-preview">
+    <div class="container">
+      <h2>Real Help. Real Fast.</h2>
+      <p style="font-size:1.3rem; max-width:700px; margin:0 auto 2.5rem;">
+        Thousands of veterans already getting the support they earned — join the conversation today.
+      </p>
+      <a href="https://discord.com/invite/usvn" class="btn btn-primary" target="_blank">Enter the Community →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>USVN – United States Veterans Network</p>
+      <p>501(c)(3) Nonprofit | EIN 41-3630368 | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+      <p style="margin-top:1.5rem;">Built by veterans, for veterans.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
